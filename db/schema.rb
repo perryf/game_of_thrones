@@ -20,7 +20,8 @@ ActiveRecord::Schema.define(version: 20170802171245) do
     t.string "title"
     t.integer "age"
     t.string "photo_url"
-    t.boolean "head_of_house"
+    t.boolean "alive", default: true
+    t.boolean "head_of_house", default: false
     t.bigint "house_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -28,9 +29,10 @@ ActiveRecord::Schema.define(version: 20170802171245) do
   end
 
   create_table "houses", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.string "photo_url"
     t.string "motto"
+    t.string "territory"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,0 +1,12 @@
+<h2><%= @character.name %>, <%= @character.title %></h2>
+<%= image_tag(@character.photo_url) %>
+
+<p>Member of: <%= @character.house.name %></p>
+<p>Age: <%= @character.age %></p>
+<p>Alive? <%= @character.alive %></p>
+<p>Head of House? <%= @character.head_of_house %></p>
+<%= link_to "Edit this Character", edit_house_character_path %>
+<br>
+<%= link_to "Kill this Character", house_character_path(@character.house, @character), method: :delete, class: 'delete' %>
+<br>
+<%= link_to "Back to House Page", house_path(@character.house) %>

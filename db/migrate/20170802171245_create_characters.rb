@@ -5,7 +5,8 @@ class CreateCharacters < ActiveRecord::Migration[5.1]
       t.string :title
       t.integer :age
       t.string :photo_url
-      t.boolean :head_of_house
+      t.boolean :alive, default: true
+      t.boolean :head_of_house, default: false
       t.references :house, index: true, foreign_key: true
       t.timestamps
     end

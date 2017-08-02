@@ -1,0 +1,14 @@
+<div class="houses">
+  <% @houses.each do |house| %>
+    <div class="house">
+      <a href="<%= house_path(house)%>">
+        <h2><%= house.name %></h2>
+        <img src="<%= house.photo_url %>" alt="<%= house.name %>" width="150px">
+      </a>
+    </div>
+  <% end %>
+</div>
+
+<footer>
+  <%= link_to "Create a new House", new_house_path%>
+</footer>
