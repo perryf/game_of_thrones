@@ -35,8 +35,9 @@ class CharactersController < ApplicationController
   def destroy
     @character = Character.find(params[:id])
     @house = @character.house
-    @character.destroy
-    redirect_to house_path(@house), notice: "Character has been killed"
+    @character.alive = false
+    @character.save
+    redirect_to house_character_path(@house, @character), notice: "Character has been killed"
   end
 
   private

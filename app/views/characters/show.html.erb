@@ -1,12 +1,21 @@
 <h2><%= @character.name %>, <%= @character.title %></h2>
 <img src="<%= @character.photo_url %>" alt="<%= @character.name %>">
 
-<p>Member of: <%= @character.house.name %></p>
-<p>Age: <%= @character.age %></p>
-<p>Alive? <%= @character.alive %></p>
-<p>Head of House? <%= @character.head_of_house %></p>
-<%= link_to "Edit this Character", edit_house_character_path %>
+<p>Member of: <%= @character.house.name %>
+  <% if @character.head_of_house %>, Head of House
+  <% end %>
+</p>
+<% if @character.alive %>
+  <p>Age: <%= @character.age %></p>
+  <p>Status: Alive</p>
+  <% else %>
+  <p>Status: Dead</p>
+<% end %>
+<%= link_to "Edit this Character", edit_house_character_path, class: "character-link" %>
+|
+<% if @character.alive %>
+  <%= link_to "Kill this Character", house_character_path(@character.house, @character), method: :delete, class: "delete character-link" %>
+<% end %>
 <br>
-<%= link_to "Kill this Character", house_character_path(@character.house, @character), method: :delete, class: 'delete' %>
 <br>
-<%= link_to "Back to House Page", house_path(@character.house) %>
+<%= link_to "Back to House Page", house_path(@character.house), class: "character-link" %>

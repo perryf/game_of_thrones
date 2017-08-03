@@ -9,7 +9,7 @@ class HousesController < ApplicationController
 
   def create
     @house = House.create(house_params)
-    redirect_to @house
+    redirect_to @house, notice: "House was successfully edited"
   end
 
   def show
@@ -23,13 +23,13 @@ class HousesController < ApplicationController
   def update
     @house = @house = House.find(params[:id])
     @house.update(house_params)
-    redirect_to @house
+    redirect_to @house, notice: "House was successfully updated"
   end
 
   def destroy
     @house = House.find(params[:id])
     @house.destroy
-    redirect_to houses_path
+    redirect_to houses_path, notice: "House was successfully destroyed"
   end
 
   private
