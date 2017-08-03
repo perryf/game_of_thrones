@@ -19,10 +19,26 @@
  }
 
  body {
+   background-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
    font-family: "thrones";
  }
 
  h1 {
+   text-align: center;
+ }
+
+ .flash {
+  border: 1px solid black;
+  padding: 1em;
+  background: #eee;
+}
+
+.alert  { color: red;  }
+.notice { color: blue; }
+
+ .titles {
+   margin: auto;
+   width: 50%;
    text-align: center;
  }
 
@@ -37,6 +53,7 @@
 
  .houses {
    display: flex;
+   flex-wrap: wrap;
    justify-content: center;
  }
 
@@ -61,4 +78,19 @@
 
  .house-characters {
    width: 100px;
+ }
+
+ .character-index {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+ }
+
+ .character-info {
+   text-align: center;
+   margin: 5px;
+   border: 1px solid black;
+   background: #ddd;
+   width: 300px;
+   background-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
  }

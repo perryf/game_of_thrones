@@ -1,16 +1,16 @@
 <div class="house-show">
   <h2><%= @house.name %></h2>
-  <%= image_tag(@house.photo_url, class: 'house-show-img') %>
+  <img src="<%= @house.photo_url %>" alt="<%= @house.name %>">
   <p>Motto: <%= @house.motto %></p>
   <p>Territory: <%= @house.territory %></p>
-  <%= link_to "(edit this house)", edit_house_path %>
+  <%= link_to "edit this house", edit_house_path %>
   <hr>
 
   <h3>Members</h3>
     <% @house.characters.each do |character| %>
     <a href="<%= house_character_path(@house, character) %>">
       <p><%= character.name %></p>
-      <%= image_tag(character.photo_url, class: 'house-characters') %>
+      <img src="<%= character.photo_url %>" alt="<%= character.name %>" class="house-characters">
     </a>
   <% end %>
 </div>

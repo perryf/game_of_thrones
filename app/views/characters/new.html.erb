@@ -1,0 +1,19 @@
+<h2>Create a new Character</h2>
+<%= form_for ([@character.house, @character]) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :photo_url %>
+  <%= f.text_field :photo_url %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :age %>
+  <%= f.text_field :age %>
+
+  <%= f.label :house %>
+  <%= select(:character, :house_id, House.all.collect{|house| [house.name, house.id]})%>
+
+  <%= f.submit %>
+<% end %>

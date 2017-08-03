@@ -10,7 +10,15 @@
 
   <body>
     <header>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
       <a href="<%= root_path %>"><h1>Game of Thrones</a></h1>
+      <div class="titles">
+
+        <h2><a href="<%= houses_path %>">Houses</a> | <a href="<%= characters_path %>">Characters</a></h2>
+
+      </div>
       <hr>
     </header>
 

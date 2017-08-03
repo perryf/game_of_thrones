@@ -1,5 +1,5 @@
 <h2><%= @character.name %>, <%= @character.title %></h2>
-<%= image_tag(@character.photo_url) %>
+<img src="<%= @character.photo_url %>" alt="<%= @character.name %>">
 
 <p>Member of: <%= @character.house.name %></p>
 <p>Age: <%= @character.age %></p>
