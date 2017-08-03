@@ -12,8 +12,7 @@
   <p>Status: Dead</p>
 <% end %>
 <%= link_to "Edit this Character", edit_house_character_path, class: "character-link" %>
-|
-<% if @character.alive %>
+<% if @character.alive %> |
   <%= link_to "Kill this Character", house_character_path(@character.house, @character), method: :delete, class: "delete character-link" %>
 <% end %>
 <br>

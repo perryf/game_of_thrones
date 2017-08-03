@@ -66,7 +66,11 @@
    margin: 0 auto;
  }
 
- .house-show h2 {
+ .house-show h2, h3 {
+   text-align: center;
+ }
+
+ .house-show-info {
    text-align: center;
  }
 
@@ -77,6 +81,21 @@
  }
 
  .house-characters {
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+ }
+
+ .house-characters-info {
+   text-align: center;
+   width: 200px;
+   height: 250px;
+   border: 1px solid black;
+   background: #ddd;
+ }
+
+ .house-characters-img {
    width: 100px;
  }
 
