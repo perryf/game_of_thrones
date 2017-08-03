@@ -113,3 +113,16 @@
    width: 300px;
    background-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
  }
+
+ .edit-form {
+   text-align: center;
+   margin: 20px 0;
+ }
+
+ #character_photo_url {
+   width: 300px;
+ }
+
+ #house_photo_url {
+   width: 300px;
+ }

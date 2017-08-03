@@ -1,18 +1,29 @@
-<h2>Edit This House</h2>
-<%= form_for @house do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<div class="edit-form">
+  <h2>Edit This House</h2>
+  <%= form_for @house do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+</div>
 
-  <%= f.label :photo_url %>
-  <%= f.text_field :photo_url %>
+  <div class="edit-form">
+    <%= f.label :photo_url %>
+    <%= f.text_field :photo_url %>
+  </div>
 
-  <%= f.label :motto %>
-  <%= f.text_field :motto %>
+  <div class="edit-form">
+    <%= f.label :motto %>
+    <%= f.text_field :motto %>
+  </div>
 
-  <%= f.label :territory %>
-  <%= f.text_field :territory %>
+  <div class="edit-form">
+    <%= f.label :territory %>
+    <%= f.text_field :territory %>
+  </div>
 
-  <%= f.submit %>
+  <div class="edit-form">
+    <%= f.submit %>
+  </div>
 <% end %>
-<br>
-<%= link_to 'Delete this House', house_path(@house), method: :delete, class: 'delete' %>
+<div class="edit-form">
+  <%= link_to 'Delete this House', house_path(@house), method: :delete, class: 'delete' %>
+</div>

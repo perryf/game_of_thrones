@@ -1,19 +1,41 @@
+<div class="edit-form">
 <h2>Edit this Character</h2>
 <%= form_for ([@house, @character]) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
 
+<div class="edit-form">
   <%= f.label :photo_url %>
   <%= f.text_field :photo_url %>
+</div>
 
+<div class="edit-form">
   <%= f.label :title %>
   <%= f.text_field :title %>
+</div>
 
+<div class="edit-form">
   <%= f.label :age %>
   <%= f.text_field :age %>
+</div>
 
+<div class="edit-form">
+  <%= f.label :head_of_house %>
+  <%= select(:character, :head_of_house, [["Yes", true],["No", false]]) %>
+</div>
+
+<div class="edit-form">
+  <%= f.label :alive %>
+  <%= select(:character, :alive, [["Yes", true],["No", false]]) %>
+</div>
+
+<div class="edit-form">
   <%= f.label :house %>
   <%= select(:character, :house_id, House.all.collect{|house| [house.name, house.id]})%>
+</div>
 
+<div class="edit-form">
   <%= f.submit %>
+</div>
 <% end %>
